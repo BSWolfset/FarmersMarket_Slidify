@@ -42,6 +42,7 @@ library(ggplot2)
 library(sqldf)
 FarmMarketRaw <-
   read.csv("~/R/win-library/3.3/Market/data/FMExport.csv", na.strings = c("NA", "", "#DIV/0!"), header = TRUE, strip.white = TRUE)
+  #read.csv("data/FMExport.csv", na.strings = c("NA", "", "#DIV/0!"), header = TRUE, strip.white = TRUE)
 StRegDF <- cbind(as.data.frame(state.name), reg=state.region)
 names(StRegDF)[names(StRegDF)=="state.name"] <- "State"
 StRegDF <- sqldf("select reg, FarmMarketRaw.State, count(*) as cnt
@@ -69,7 +70,7 @@ qplot(data=StRegDF, cnt, State, label=State,
 ## Next Steps
 
 * Bugs
-    + Browsers work inconsistently: Shiny app works in Firefox.  Does not work in IE.  Limited success in Chrome, Edge.
+    + Browsers work inconsistently: Shiny app works in Firefox and Safari.  Does not work in IE.  Limited success in Chrome, Edge.
     + Allow the ability to go back to All States
 
 * Enhancements

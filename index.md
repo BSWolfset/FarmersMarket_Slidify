@@ -37,14 +37,14 @@ knit        : slidify::knit2slides
 
 ## Farmers Market Distribution by State
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
 
 ---
 
 ## Next Steps
 
 * Bugs
-    + Browsers work inconsistently: Shiny app works in Firefox.  Does not work in IE.  Limited success in Chrome, Edge.
+    + Browsers work inconsistently: Shiny app works in Firefox and Safari.  Does not work in IE.  Limited success in Chrome, Edge.
     + Allow the ability to go back to All States
 
 * Enhancements
